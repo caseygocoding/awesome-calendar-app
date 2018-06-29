@@ -89,7 +89,7 @@ class UpdateForm extends Component {
                   event,
                   this.props.event.id,
                   fullDate,
-                  this.handleClose,
+
                   this.handleUpdateOff
                 )
               }
@@ -154,7 +154,9 @@ class UpdateForm extends Component {
                 placeholder={this.props.event.description}
                 name="description"
               />
-              <Button type="submit">Submit</Button>
+              <Button onClick={this.handleClose} type="submit">
+                Submit
+              </Button>
             </Form>
           ) : null}
 
@@ -235,7 +237,7 @@ const mapState = state => {
 };
 const mapDispatch = dispatch => {
   return {
-    handleSubmit: (event, id, fulldate, handleClose, handleUpdateOff) => {
+    handleSubmit: (event, id, fulldate, handleUpdateOff) => {
       event.preventDefault();
       const eventName = event.target.eventName.value;
       const startTime =
@@ -259,7 +261,6 @@ const mapDispatch = dispatch => {
         })
       );
       handleUpdateOff();
-      handleClose();
     },
     deleteSingleEvent: id => {
       dispatch(deleteSingleEvent(id));
