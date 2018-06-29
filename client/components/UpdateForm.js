@@ -55,7 +55,6 @@ class UpdateForm extends Component {
   }
   handleUpdate() {
     this.setState({ update: true });
-    this.handleOpen();
   }
   handleUpdateOff() {
     this.setState({ update: false });
@@ -187,11 +186,7 @@ class UpdateForm extends Component {
 
             {!this.state.update ? (
               <Button.Group id="updateButton">
-                <Button
-                  size="big"
-                  positive
-                  onClick={this.handleUpdate}
-                >
+                <Button size="big" positive onClick={this.handleUpdate}>
                   Update
                 </Button>
                 <Button.Or size="massive" />
