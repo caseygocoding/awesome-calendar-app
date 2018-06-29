@@ -54,6 +54,7 @@ class UpdateForm extends Component {
     this.props.deleteSingleEvent(id);
   }
   handleUpdate() {
+    this.setState({ modalOpen: true });
     this.setState({ update: true });
   }
   handleUpdateOff() {
@@ -193,7 +194,6 @@ class UpdateForm extends Component {
                 <Button
                   size="big"
                   negative
-                  type="submit"
                   onClick={() => this.handleDelete(this.props.event.id)}
                 >
                   Delete
