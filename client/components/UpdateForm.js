@@ -48,13 +48,14 @@ class UpdateForm extends Component {
   }
   handleClose() {
     this.setState({ modalOpen: false });
+    this.setState({ update: false });
   }
   handleDelete(id) {
     this.props.deleteSingleEvent(id);
   }
   handleUpdate() {
     this.setState({ update: true });
-    this.handleOpen();
+    // this.handleOpen();
   }
   handleUpdateOff() {
     this.setState({ update: false });
