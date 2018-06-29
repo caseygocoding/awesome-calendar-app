@@ -190,7 +190,6 @@ class UpdateForm extends Component {
                 <Button
                   size="big"
                   positive
-                  type="submit"
                   onClick={this.handleUpdate}
                 >
                   Update
