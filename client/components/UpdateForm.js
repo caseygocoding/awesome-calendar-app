@@ -54,6 +54,7 @@ class UpdateForm extends Component {
   }
   handleUpdate() {
     this.setState({ update: true });
+    this.handleOpen();
   }
   handleUpdateOff() {
     this.setState({ update: false });
